@@ -6,10 +6,13 @@
         <entry key="..\:/Users/vyvan/AndroidStudioProjects/Android-By-Chapter/ViewPager/app/src/main/res/drawable/default_dot.xml" value="0.24814814814814815" />
         <entry key="..\:/Users/vyvan/AndroidStudioProjects/Android-By-Chapter/ViewPager/app/src/main/res/drawable/selected_dot.xml" value="0.24814814814814815" />
         <entry key="..\:/Users/vyvan/AndroidStudioProjects/Android-By-Chapter/ViewPager/app/src/main/res/drawable/tab_selected.xml" value="0.24814814814814815" />
+        <entry key="..\:/Users/vyvan/AndroidStudioProjects/Android-By-Chapter/ViewPager/app/src/main/res/layout/activity_fragment_page_adapter.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/vyvan/AndroidStudioProjects/Android-By-Chapter/ViewPager/app/src/main/res/layout/activity_main.xml" value="0.2057460611677479" />
         <entry key="..\:/Users/vyvan/AndroidStudioProjects/Android-By-Chapter/ViewPager/app/src/main/res/layout/activity_main_auto_image_slide.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/vyvan/AndroidStudioProjects/Android-By-Chapter/ViewPager/app/src/main/res/layout/fragment_blank.xml" value="0.1125" />
         <entry key="..\:/Users/vyvan/AndroidStudioProjects/Android-By-Chapter/ViewPager/app/src/main/res/layout/image.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/vyvan/AndroidStudioProjects/Android-By-Chapter/ViewPager/app/src/main/res/layout/slider_item.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/vyvan/AndroidStudioProjects/Android-By-Chapter/ViewPager/app/src/main/res/layout/view_page_2.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>

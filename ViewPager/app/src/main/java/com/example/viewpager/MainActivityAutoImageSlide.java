@@ -26,7 +26,7 @@ public class MainActivityAutoImageSlide extends AppCompatActivity {
         SliderAdapter sliderAdapter = new SliderAdapter(images, this);
         imageSlider.setSliderAdapter(sliderAdapter);
         imageSlider.setIndicatorAnimation(IndicatorAnimationType.WORM);
-        imageSlider.setSliderTransformAnimation(SliderAnimations.DEPTHTRANSFORMATION);
+        imageSlider.setSliderTransformAnimation(SliderAnimations.CUBEINDEPTHTRANSFORMATION);
         imageSlider.setScrollTimeInMillis(2800);
         imageSlider.startAutoCycle();
     }

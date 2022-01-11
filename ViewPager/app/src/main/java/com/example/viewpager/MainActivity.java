@@ -33,12 +33,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
+                //Phương thức này sẽ được gọi khi trang hiện tại được cuộn, như một phần của // cuộn trơn được khởi tạo theo chương trình hoặc cuộn cảm ứng do người dùng khởi tạo
             }
 
             @Override
             public void onPageSelected(int position) {
                 Log.e("Pos", position+"");
-
+              //  Được gọi khi trạng thái cuộn thay đổi. Hữu ích để khám phá khi nào người dùng bắt đầu // kéo, khi máy nhắn tin tự động chuyển đến trang hiện tại, // hoặc khi nó dừng hoàn toàn / không hoạt động
             }
 
             @Override
