@@ -33,3 +33,4 @@ try hard
     -RecyclerView use Adapter with DataBinding
     -Use SortList Add,Up,Delete without notifyDataSetChanged;
     -Drag, Drop, Swipe Item in RecyclerView
+    -Show defaukt view till Item load or when data is not available

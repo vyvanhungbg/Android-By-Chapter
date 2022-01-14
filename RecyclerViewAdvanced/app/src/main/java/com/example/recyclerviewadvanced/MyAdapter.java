@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.SortedList;
 import androidx.recyclerview.widget.SortedListAdapterCallback;
 
+import java.util.Collections;
 import java.util.List;
 
 // Một apdapter cung cấp khả năng sort nhanh hơn . Tránh dùng notifydata set chang gây giảm hiệu năng
@@ -88,7 +89,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     public void removeModelAt(int i) {
         mSortedList.removeItemAt(i);
     }
-
+    public void swapModel(int fromPos , int toPos){
+        //Collections.swap(mSortedList,fromPos,toPos);
+        Item tmp = mSortedList.get(fromPos);
+    }
 
     class ViewHolder extends RecyclerView.ViewHolder {
         TextView name;

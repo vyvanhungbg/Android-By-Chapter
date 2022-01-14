@@ -15,6 +15,7 @@ public class AdapterItem extends RecyclerView.Adapter<AdapterItem.ViewHolder> {
 
     List<Item> list;
     IClickItemListener listener;
+    int EMPTY_VIEW = 12345;
 
     public AdapterItem(List<Item> list, IClickItemListener listener) {
         this.list = list;
@@ -24,8 +25,19 @@ public class AdapterItem extends RecyclerView.Adapter<AdapterItem.ViewHolder> {
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.nothing,parent,false);
+       if(viewType != EMPTY_VIEW){
+            view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item,parent,false);
+       }
         return new ViewHolder(view);
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        if(list.size() == 0 || list == null){
+            return EMPTY_VIEW;
+        }
+        return super.getItemViewType(position);
     }
 
     @Override
