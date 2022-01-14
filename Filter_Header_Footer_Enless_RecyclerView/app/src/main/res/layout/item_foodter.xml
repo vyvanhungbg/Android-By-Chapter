@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <LinearLayout  android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="8dp"
+        android:id="@+id/layout_item_footer">
+
+        <TextView
+            android:background="@color/teal_200"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="30dp"
+            android:text="FOOTER"
+            android:gravity="center">
+        </TextView>
+
+    </LinearLayout>
+</layout>

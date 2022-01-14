@@ -34,3 +34,5 @@ try hard
     -Use SortList Add,Up,Delete without notifyDataSetChanged;
     -Drag, Drop, Swipe Item in RecyclerView
     -Show defaukt view till Item load or when data is not available
+    -Header - Footer - Filter - RecyclerView
+    -Chapter 16 _Endless Scrolling in RecyclerView
