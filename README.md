@@ -36,3 +36,8 @@ try hard
     -Show defaukt view till Item load or when data is not available
     -Header - Footer - Filter - RecyclerView
     -Chapter 16 _Endless Scrolling in RecyclerView
+
+#Chapter 18 RecyclerView- ClickItemListener
+    -Click Listener by Interface
+    -Click Listener by RxJava
+    -Click Listener by Custom TouchItemClickListener-LongClick-ClickNormal
