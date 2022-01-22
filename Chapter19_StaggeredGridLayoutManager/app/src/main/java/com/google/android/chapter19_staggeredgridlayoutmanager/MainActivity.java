@@ -47,6 +47,19 @@ public class MainActivity extends AppCompatActivity {
         images.add(new Image("Ảnh 7",url7));
         images.add(new Image("Ảnh 8",url8));
         images.add(new Image("Ảnh 9",url9));
+        images.add(new Image("Ảnh 1",url1));
+
+        images.add(new Image("Ảnh 4",url4));
+        images.add(new Image("Ảnh 5",url5));
+        images.add(new Image("Ảnh 2",url2));
+        images.add(new Image("Ảnh 3",url3));
+        images.add(new Image("Ảnh 1",url1));
+        images.add(new Image("Ảnh 1",url1));
+
+        images.add(new Image("Ảnh 5",url5));
+        images.add(new Image("Ảnh 5",url5));
+        images.add(new Image("Ảnh 5",url5));
+        images.add(new Image("Ảnh 6",url6));
         StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL);
         binding.recyclerView.setLayoutManager(layoutManager);
         binding.recyclerView.setAdapter(new ImageAdapter(images));
