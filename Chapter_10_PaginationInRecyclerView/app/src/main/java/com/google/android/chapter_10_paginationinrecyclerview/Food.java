@@ -1,5 +1,7 @@
 package com.google.android.chapter_10_paginationinrecyclerview;
 
+import java.util.Objects;
+
 public class Food {
     private long idFood;
     private String foodName;
@@ -48,4 +50,11 @@ public class Food {
     public void setFoodPrice(String foodPrice) {
         this.foodPrice = foodPrice;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        return super.equals(o);
+    }
+
+
 }

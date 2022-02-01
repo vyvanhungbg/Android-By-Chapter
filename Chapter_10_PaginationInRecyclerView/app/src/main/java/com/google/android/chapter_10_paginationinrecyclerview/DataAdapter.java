@@ -1,71 +1,91 @@
 package com.google.android.chapter_10_paginationinrecyclerview;
 
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.paging.PagedList;
+import androidx.paging.PagedListAdapter;
+import androidx.recyclerview.widget.AsyncDifferConfig;
+import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.chapter_10_paginationinrecyclerview.my_interface.OnLoadMoreListener;
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
-public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
-    private final int VIEW_ITEM = 1;
-    private final  int VIEW_PROG = 0;
-
-    private List<Food> foods;
-    private int visibleThreshold = 5;
-    private int lastVisibleItem, totalItemCount;
-    private boolean loading;
-    private OnLoadMoreListener onLoadMoreListener;
+public class DataAdapter extends PagedListAdapter<Food,DataAdapter.ViewHolder> {
 
 
-    public DataAdapter(List<Food> foods,RecyclerView recyclerView) {
-        this.foods = foods;
-        if(recyclerView.getLayoutManager() instanceof LinearLayoutManager){
-            final LinearLayoutManager layoutManager = (LinearLayoutManager) recyclerView.getLayoutManager();
-            recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
-                @Override
-                public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
-                    super.onScrolled(recyclerView, dx, dy);
-                    totalItemCount = layoutManager.getItemCount();
-                    lastVisibleItem = layoutManager.findLastVisibleItemPosition();
-                    if(!loading && totalItemCount <= (lastVisibleItem+visibleThreshold)){
-                        if(onLoadMoreListener != null){
-                            onLoadMoreListener.onLoadMore();
-                        }
-                        loading = true;
-                    }
 
-                }
-            });
-        }
+
+    protected DataAdapter() {
+        super(diffCallback);
     }
 
-    @Override
-    public int getItemViewType(int position) {
-        return foods.get(position) !=null ? VIEW_ITEM:VIEW_PROG;
-    }
+
+
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.food_item,parent,false);
+        return new ViewHolder(v);
     }
+
+
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
+        Food food = getItem(position);
+        Picasso.get().load(food.getFoodImage()).into(holder.foodImage);
+        holder.foodName.setText(food.getFoodName());
     }
 
-    @Override
-    public int getItemCount() {
-        return 0;
+
+
+
+
+
+    //
+    private static DiffUtil.ItemCallback<Food> diffCallback =
+            new DiffUtil.ItemCallback<Food>() {
+                @Override
+                public boolean areItemsTheSame(@NonNull Food oldItem, @NonNull Food newItem) {
+                    return oldItem.getIdFood() == newItem.getIdFood();
+                }
+
+                @Override
+                public boolean areContentsTheSame(@NonNull Food oldItem, @NonNull Food newItem) {
+                    return oldItem.equals(newItem);
+                }
+            };
+
+
+    public static class ProgressBarHolder extends RecyclerView.ViewHolder{
+        public ProgressBar progressBar;
+        public ProgressBarHolder(@NonNull View itemView) {
+            super(itemView);
+            progressBar = itemView.findViewById(R.id.progress_bar);
+
+        }
     }
+
 
     public class ViewHolder extends RecyclerView.ViewHolder {
+        public TextView foodName,foodPrice;
+        ImageView foodImage;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            foodImage = itemView.findViewById(R.id.foodImage);
+            foodName = itemView.findViewById(R.id.foodName);
         }
     }
 }

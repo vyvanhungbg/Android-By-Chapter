@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+   >
+
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".MainActivity"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+       <GridLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:columnCount="3"
+
+           >
+           <ImageView
+               android:id="@+id/cart1"
+               android:layout_width="0dp"
+               android:layout_columnWeight="1"
+               android:scaleType="fitXY"
+               android:src="@drawable/ic_baseline_shopping_cart_24"
+               android:layout_height="100dp">
+           </ImageView>
+           <ImageView
+               android:id="@+id/cart2"
+               android:layout_width="0dp"
+               android:layout_columnWeight="1"
+               android:scaleType="fitXY"
+               android:layout_height="100dp"
+               android:contentDescription="load ảnh từ drawable">
+           </ImageView>
+           <ImageView
+               android:id="@+id/cart3"
+               android:layout_width="0dp"
+               android:layout_columnWeight="1"
+               android:scaleType="fitXY"
+               android:layout_height="100dp"
+               android:contentDescription="load ảnh bằng picasso">
+           </ImageView>
+           <ImageView
+               android:id="@+id/cart4"
+               android:layout_width="0dp"
+               android:layout_columnWeight="1"
+               android:scaleType="fitXY"
+               android:layout_height="100dp"
+               android:contentDescription="load ảnh bằng glide">
+           </ImageView>
+
+           <ImageView
+               android:id="@+id/cart5"
+               android:layout_width="0dp"
+               android:layout_columnWeight="1"
+               android:scaleType="fitXY"
+               android:layout_height="100dp"
+               android:contentDescription="load ảnh bằng glide"
+               >
+
+           </ImageView>
+
+           <com.google.android.chapter_21_imageview.MLRoundedImageView
+               android:id="@+id/cart6"
+               android:layout_width="0dp"
+               android:layout_columnWeight="1"
+               android:scaleType="fitXY"
+               android:layout_height="100dp"
+               android:contentDescription="load ảnh bằng glide"
+               >
+
+           </com.google.android.chapter_21_imageview.MLRoundedImageView>
+       </GridLayout>
+    </LinearLayout>
+
+</layout>

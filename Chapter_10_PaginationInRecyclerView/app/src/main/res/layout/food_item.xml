@@ -20,13 +20,13 @@
                 android:layout_height="150dp"
                 android:adjustViewBounds="true"
                 android:scaleType="centerCrop"
-                android:id="@+id/imageView"/>
+                android:id="@+id/foodImage"/>
             <TextView
                 android:padding="12dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="top|left"
-                android:id="@+id/name"
+                android:id="@+id/foodName"
                 android:text="Hung"
                 android:layout_gravity="center|top"
                 />

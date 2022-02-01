@@ -6,7 +6,7 @@ android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "com.google.android.chapter_10_paginationinrecyclerview"
+        applicationId "com.google.android.chapter_21_imageview"
         minSdk 21
         targetSdk 31
         versionCode 1
@@ -41,29 +41,7 @@ dependencies {
 
     // https://mvnrepository.com/artifact/com.squareup.picasso/picasso
     implementation 'com.squareup.picasso:picasso:2.71828'
-
-    // https://mvnrepository.com/artifact/com.squareup.retrofit2/retrofit
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-
-    // https://mvnrepository.com/artifact/com.squareup.retrofit2/converter-gson
-    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
-
-
-    implementation 'android.arch.paging:runtime:1.0.0'
-
-    implementation 'io.reactivex.rxjava2:rxjava:2.1.9'
-    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
-
-    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
-    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
-    implementation 'android.arch.lifecycle:extensions:1.1.1'
-
-    // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-extensions
-    runtimeOnly 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-
-    // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-viewmodel
-    runtimeOnly group: 'androidx.lifecycle', name: 'lifecycle-viewmodel', version: '2.4.0'
-
-
+    // https://mvnrepository.com/artifact/com.github.bumptech.glide/glide
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
 
 }

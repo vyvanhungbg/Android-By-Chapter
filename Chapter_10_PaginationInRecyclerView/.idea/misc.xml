@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/vyvan/AndroidStudioProjects/Android-By-Chapter/Chapter_10_PaginationInRecyclerView/app/src/main/res/layout/activity_main.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/vyvan/AndroidStudioProjects/Android-By-Chapter/Chapter_10_PaginationInRecyclerView/app/src/main/res/layout/food_item.xml" value="0.17916666666666667" />
+        <entry key="..\:/Users/vyvan/AndroidStudioProjects/Android-By-Chapter/Chapter_10_PaginationInRecyclerView/app/src/main/res/layout/progess_item.xml" value="0.17916666666666667" />
       </map>
     </option>
   </component>
