@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
    >
 
     <LinearLayout
@@ -20,13 +21,15 @@
                android:layout_columnWeight="1"
                android:scaleType="fitXY"
                android:src="@drawable/ic_baseline_shopping_cart_24"
-               android:layout_height="100dp">
+               android:layout_height="100dp"
+               app:tint="#009c38">
            </ImageView>
            <ImageView
                android:id="@+id/cart2"
                android:layout_width="0dp"
                android:layout_columnWeight="1"
                android:scaleType="fitXY"
+               android:src="@drawable/ic_baseline_shopping_cart_24"
                android:layout_height="100dp"
                android:contentDescription="load ảnh từ drawable">
            </ImageView>

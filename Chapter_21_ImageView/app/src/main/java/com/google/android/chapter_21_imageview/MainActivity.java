@@ -5,6 +5,7 @@ import androidx.databinding.DataBindingUtil;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,6 +21,7 @@ import java.net.URL;
 
 public class MainActivity extends AppCompatActivity  {
 
+    // Khai báo Quyền internet
     private static final String TAG = MainActivity.class.getSimpleName();
     ActivityMainBinding binding;
     String url1 = "https://firebasestorage.googleapis.com/v0/b/onefood-54cc3.appspot.com/o/food%2F13_compressed.jpeg?alt=media&token=6e07abec-7fc1-47d6-9f63-276e82c52361";
@@ -29,9 +31,20 @@ public class MainActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main);
+
+        // Chú ý với các thuộc tính căn ảnh như ScaleType [CenterCrop, FitXY, Matrix ...]
+        // Sử dụng tint:"#.." để thay đổi màu sắc của ảnh
+        //: Các mã màu "#rgb", "#argb", "#rrggbb", or "#aarrggbb"
+
         binding.cart2.setImageResource(R.drawable.ic_baseline_shopping_cart_24); // set anh từ drawable
+
+        //Thay đổi màu sắc
+        binding.cart2.setColorFilter((Color.argb(120, 255, 156, 38)));
+
+        // Load ảnh bằng Pícasso
         Picasso.get().load(url1).placeholder(R.drawable.ic_baseline_shopping_cart_24).error(R.drawable.ic_baseline_shopping_cart_24).into(binding.cart3);
 
+        //Load ảnh bằng Glide
         RequestOptions options = new RequestOptions()
                 .centerCrop()
                 .placeholder(R.mipmap.ic_launcher_round)
@@ -39,7 +52,10 @@ public class MainActivity extends AppCompatActivity  {
 
         Glide.with(this).applyDefaultRequestOptions(options).load(url2).into(binding.cart4);
 
-       new DownloadImagesTask().execute(binding.cart5);
+        //Load ảnh bằng tay :)
+       new LoadImageFromInternet(binding.cart5).execute(url3);
+
+
 
 
 
@@ -50,14 +66,17 @@ public class MainActivity extends AppCompatActivity  {
 
 
 
-    public class DownloadImagesTask extends AsyncTask<ImageView, Void, Bitmap> {
+    public class LoadImageFromInternet extends AsyncTask<String, Void, Bitmap> {
         ImageView imageView = null;
 
+        public LoadImageFromInternet(ImageView imageView) {
+            this.imageView = imageView;
+        }
 
         @Override
-        protected Bitmap doInBackground(ImageView... imageViews) {
-            this.imageView = imageViews[0];
-            return download_Image((String) imageView.getTag());
+        protected Bitmap doInBackground(String... strings) {
+            String url = strings[0];
+            return download_Image(url);
         }
 
         @Override
