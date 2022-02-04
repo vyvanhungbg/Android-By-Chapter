@@ -42,3 +42,7 @@ try hard
     -Click Listener by RxJava\
     -Click Listener by Custom TouchItemClickListener-LongClick-ClickNormal\
 #Chapter 19 StaggeredGridLayoutManager\
+
+#Chapter 21 ImageView\
+
+#Chapter 22 VideoView\
