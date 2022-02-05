@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     com.google.android.chapter_22_videoview.VideoView videoViewCustom;
     SeekBar seekBar;
     // Chú ý path là một luồng tream video có đuôi mp4 or mkv chứ k phải là link trang web xem video
+    String pathYoutube = "https://www.youtube.com/watch?v=H6onnUDRsWg&list=RDH6onnUDRsWg&start_radio=1";
     String pathToVideo = "https://firebasestorage.googleapis.com/v0/b/onefood-54cc3.appspot.com/o/Video%2FTat-nhat-lang.mp4?alt=media&token=441121db-51ca-42b9-8087-34076657d20d";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,8 +36,9 @@ public class MainActivity extends AppCompatActivity {
 
         //VideoVide Custom
         videoViewCustom = findViewById(R.id.video_view_custom);
-        videoViewCustom.setVideoURI(Uri.parse(pathToVideo));
+        videoViewCustom.setVideoURI(Uri.parse(pathYoutube));
         videoViewCustom.start();
+
 
 
 
