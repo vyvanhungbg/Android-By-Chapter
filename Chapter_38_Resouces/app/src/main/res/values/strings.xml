@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Chapter_38_Resouces</string>
+    <plurals name="hello_people">
+        <item quantity="one">Hello to %s person</item>
+        <item quantity="other">Hello to %d people</item>
+    </plurals>
+
+    <plurals name="chao">
+        <item quantity="zero">Hello to %d person</item>
+        <item quantity="two">Hello to %d people</item>
+    </plurals>
+
+    <string name="welcome_trainer">Hello Pokémon Trainer, %s! You have caught %d Pokémon.</string>
+</resources>

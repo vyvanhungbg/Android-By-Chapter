@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="integer_array_name">
+        <item>1</item>
+        <item>2</item>
+    </integer-array>
+    <string-array name="string_array_name">
+        <item>China</item>
+        <item>France</item>
+        <item>Thailand</item>
+    </string-array>
+</resources>
