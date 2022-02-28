@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="64dp">
+
+    <ImageView
+        android:id="@+id/image_song"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_baseline_attach_email_24"
+        android:scaleType="centerCrop"
+        android:layout_centerVertical="true">
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/image_song"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/tmg_pause_of_start"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="12dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_name_song"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tên bài hát">
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_name_single"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tên bài hát">
+        </TextView>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_baseline_stop_circle_24"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="16dp">
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/tmg_pause_of_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/img_stop"
+        android:src="@drawable/ic_baseline_stop_circle_24"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="12dp">
+    </ImageView>
+
+
+
+</RelativeLayout>
