@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Setting">
+    </Button>
+
+    <Button
+        android:id="@+id/set_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="set default setting">
+    </Button>
+
+
+    <Button
+        android:id="@+id/show_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="show setting">
+    </Button>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/input_string"
+        android:hint="input_string"></EditText>
+
+    <Button
+        android:id="@+id/save_input_string"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="save_input_string">
+    </Button>
+
+
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="clear">
+    </Button>
+
+    <Button
+        android:id="@+id/remove"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="remove key string">
+    </Button>
+
+
+    <Button
+        android:id="@+id/contain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="check contain key">
+    </Button>
+
+
+    <Button
+        android:id="@+id/show_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="show all">
+    </Button>
+
+
+</LinearLayout>

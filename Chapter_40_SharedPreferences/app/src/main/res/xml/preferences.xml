@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory
@@ -5,4 +6,41 @@
         <CheckBoxPreference
             android:key = "silent_mode"
             android:defaultValue="false"
-            android:title="Silent Mode"
+            android:title="Im lặng"
+            android:summary="Tắt tất cả âm thanh của app" />
+        <SwitchPreference
+            android:key="awesome_mode"
+            android:defaultValue="false"
+            android:switchTextOn="Yes"
+            android:switchTextOff="No"
+            android:title="Chế độ dark mode"
+            android:summary="Kích hoạt chế độ dark mode giúp dễ nhìn hơn trong đêm"/>
+        <EditTextPreference
+            android:key="custom_storage"
+            android:defaultValue="/sdcard/data/"
+            android:title="Vị trí lưu trữ"
+            android:summary="Nhập đường dẫn lưu trữ khi tải tài liệu xuống"
+            android:dialogTitle="Ví dụ ( /sdcard/data/ )"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Advanced options">
+        <ListPreference
+            android:key="list_preferences"
+            android:defaultValue="true"
+            android:title="Chọn mục"
+            android:entries="@array/settings_list_preference_titles"
+            android:entryValues="@array/settings_list_preference_values"
+            android:dialogTitle="Chọn">
+
+        </ListPreference>
+
+        <RingtonePreference
+            android:key="ringtone"
+            android:showDefault="true"
+            android:showSilent="true"
+            android:summary="Lựa chon âm báo ứng dụng"
+            android:title="Âm báo" />
+
+    </PreferenceCategory>
+</PreferenceScreen>
