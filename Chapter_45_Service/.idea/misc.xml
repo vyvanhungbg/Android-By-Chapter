@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android/Android-By-Chapter/Chapter_45_Service/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Android/Android-By-Chapter/Chapter_45_Service/app/src/main/res/layout/custom_notification.xml" value="0.25416666666666665" />
         <entry key="app/src/main/res/drawable/ic_baseline_attach_email_24.xml" value="0.198" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.23385416666666667" />
         <entry key="app/src/main/res/layout/custom_notification.xml" value="0.24791666666666667" />

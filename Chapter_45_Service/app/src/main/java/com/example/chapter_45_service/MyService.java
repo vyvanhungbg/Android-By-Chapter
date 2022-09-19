@@ -10,6 +10,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.MediaParser;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.IBinder;
 import android.util.Log;
 import android.widget.RemoteViews;
@@ -62,7 +63,8 @@ public class MyService extends Service {
 
     private void startMusic(Song song) {
         if(mediaPlayer == null){
-            mediaPlayer = MediaPlayer.create(getApplicationContext(), song.getResource());
+           // mediaPlayer = MediaPlayer.create(getApplicationContext(), song.getResource());
+            mediaPlayer = MediaPlayer.create(getApplicationContext(), Uri.parse("/storage/emulated/0/Download/ChuyenDoiTa-EmceeLDaLAB-7120974.mp3"));
         }
         mediaPlayer.start();
         isPlaying = true;
